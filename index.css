@@ -1,0 +1,59 @@
+@font-face {
+    src: url("cursed.ttf");
+    font-family: cursed;
+}
+body {
+    /* margin: 0; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1B244A;
+    height: 300px;
+    width: 600px;
+    color: white;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 5px solid #E11D48;
+}
+
+.title {
+    font-size: 30px;
+    font-weight:900 ;
+}
+
+.score {
+    background-color: black;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 100px;
+    padding: 10px 25px;
+    font-family: cursed;
+    color: #E11D48;
+    width: 120px;
+    height: 100px;
+}
+
+.btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    padding: 6px 10px;
+    margin: 0 2px;
+    font-family: cursed;
+}
+
+.start-btn {
+    height: 30px;
+    margin-top: 120px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
