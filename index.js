@@ -1,55 +1,53 @@
-let homeScore = document.getElementById("home-score")
-let guestScore = document.getElementById("guest-score")
-let homePrev = document.getElementById("homePrev")
-let guestPrev = document.getElementById("guestPrev")
+const homeScore = document.getElementById("home-score")
+const guestScore = document.getElementById("guest-score")
+const homePrev = document.getElementById("homePrev")
+const guestPrev = document.getElementById("guestPrev")
+
 let homeCount = 0
 let guestCount = 0
 
+function addPoints(team, points) {
+    if (team === 'home') {
+        homeCount += points
+        homeScore.textContent = homeCount
+    } else if (team === 'guest') {
+        guestCount += points
+        guestScore.textContent = guestCount
+    }
+}
+
 function homeBtn1() {
-    homeCount +=1
-    console.log(homeCount)
-    homeScore.textContent = homeCount
+    addPoints('home', 1)
 }
 
 function homeBtn2() {
-    homeCount +=2
-    console.log(homeCount)
-    homeScore.textContent = homeCount
+    addPoints('home', 2)
 }
 
 function homeBtn3() {
-    homeCount +=3
-    console.log(homeCount)
-    homeScore.textContent = homeCount
+    addPoints('home', 3)
 }
 
 function guestBtn1() {
-    guestCount +=1
-    console.log(guestCount)
-    guestScore.textContent = guestCount
+    addPoints('guest', 1)
 }
 
 function guestBtn2() {
-    guestCount +=2
-    console.log(guestCount)
-    guestScore.textContent = guestCount
+    addPoints('guest', 2)
 }
 
 function guestBtn3() {
-    guestCount +=3
-    console.log(guestCount)
-    guestScore.textContent = guestCount
+    addPoints('guest', 3)
 }
 
-function start() {
-    let homeMsg = "PREVIOUS SCORE: " + homeCount
-    let guestMsg = "PREVIOUS SCORE: " + guestCount
+function reset() {
+    const homeMsg = "PREVIOUS SCORE: " + homeCount
+    const guestMsg = "PREVIOUS SCORE: " + guestCount
     homePrev.textContent = homeMsg
     guestPrev.textContent = guestMsg
     
     homeScore.textContent = 0
     guestScore.textContent = 0
-    guestCount = 0
     homeCount = 0
-    
+    guestCount = 0
 }
